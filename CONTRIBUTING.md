@@ -27,7 +27,7 @@ and resolved paths.
 [`T-AST`](https://github.com/rust-lang-nursery/rust-clippy/labels/T-AST) issues will generally need you to match against a predefined syntax structure. To figure out
 how this syntax structure is encoded in the AST, it is recommended to run `rustc -Z ast-json` on an
 example of the structure and compare with the
-[nodes in the AST docs](http://manishearth.github.io/rust-internals-docs/syntax/ast/). Usually
+[nodes in the AST docs](https://doc.rust-lang.org/nightly/nightly-rustc/syntax/ast). Usually
 the lint will end up to be a nested series of matches and ifs,
 [like so](https://github.com/rust-lang-nursery/rust-clippy/blob/de5ccdfab68a5e37689f3c950ed1532ba9d652a0/src/misc.rs#L34).
 
@@ -37,7 +37,7 @@ as `E-medium`, since they might be somewhat involved code wise, but not difficul
 
 [`T-middle`](https://github.com/rust-lang-nursery/rust-clippy/labels/T-middle) issues can
 be more involved and require verifying types. The
-[`ty`](http://manishearth.github.io/rust-internals-docs/rustc/ty) module contains a
+[`ty`](https://doc.rust-lang.org/nightly/nightly-rustc/rustc/ty) module contains a
 lot of methods that are useful, though one of the most useful would be `expr_ty` (gives the type of
 an AST expression). `match_def_path()` in Clippy's `utils` module can also be useful.
 
